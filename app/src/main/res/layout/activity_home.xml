@@ -7,7 +7,42 @@
     android:layout_height="match_parent"
     tools:context="com.mobiuum.flocker.HomeActivity">
 
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        app:elevation="0dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                app:layout_collapseMode="pin"/>
+
+            <!--Other collapsing toolbar components here-->
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arc"
+            app:layout_anchor="@id/appBar"
+            app:layout_anchorGravity="bottom"
+            android:layout_gravity="bottom"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="100dp"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -17,5 +52,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        app:centre_button_color="@color/colorPrimaryDark"
         app:layout_behavior="com.luseen.spacenavigation.SpaceNavigationViewBehavior" />
 </android.support.design.widget.CoordinatorLayout>
