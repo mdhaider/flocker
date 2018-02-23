@@ -7,7 +7,7 @@ public class DateUtils {
 
     public static String format(UsageStatsWrapper usageStatsWrapper){
 
-        DateFormat format = SimpleDateFormat.getDateInstance(DateFormat.SHORT);
+        DateFormat format = SimpleDateFormat.getDateInstance(DateFormat.FULL);
         return format.format(usageStatsWrapper.getUsageStats().getLastTimeUsed());
     }
 }
