@@ -29,7 +29,7 @@ public class UsagePresenter implements UsageContract.Presenter {
     private final Context context;
 
     public UsagePresenter(Context context, UsageContract.View view) {
-        usageStatsManager = (UsageStatsManager) context.getSystemService("usagestats");
+        usageStatsManager = (UsageStatsManager) context.getSystemService(Context.USAGE_STATS_SERVICE);
         packageManager = context.getPackageManager();
         this.view = view;
         this.context = context;
